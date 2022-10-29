@@ -1,9 +1,12 @@
 package mao.toolsvalidator.config;
 
 import org.hibernate.validator.HibernateValidator;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.context.annotation.Bean;
 import org.springframework.validation.beanvalidation.MethodValidationPostProcessor;
 
+import javax.annotation.PostConstruct;
 import javax.validation.Validation;
 import javax.validation.Validator;
 import javax.validation.ValidatorFactory;
@@ -24,6 +27,8 @@ import javax.validation.ValidatorFactory;
 
 public class ValidatorConfig
 {
+    private static final Logger log = LoggerFactory.getLogger(ValidatorConfig.class);
+
     @Bean
     public Validator validator()
     {
@@ -48,5 +53,11 @@ public class ValidatorConfig
         /*设置validator模式为快速失败返回*/
         postProcessor.setValidator(validator());
         return postProcessor;
+    }
+
+    @PostConstruct
+    public void init()
+    {
+        log.info("开启hibernate-validator快速返回");
     }
 }
