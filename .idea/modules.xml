@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/hibernate_validator_demo2.iml" filepath="$PROJECT_DIR$/hibernate_validator_demo2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tools-validator/tools-validator.iml" filepath="$PROJECT_DIR$/tools-validator/tools-validator.iml" />
+      <module fileurl="file://$PROJECT_DIR$/use/use.iml" filepath="$PROJECT_DIR$/use/use.iml" />
+    </modules>
+  </component>
+</project>
